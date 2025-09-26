@@ -1,5 +1,13 @@
 # encoding: utf-8
 
+# Load ActiveSupport with proper initialization for 7.1+
+require 'active_support'
+require 'active_support/version'
+if ActiveSupport::VERSION::MAJOR >= 7 && ActiveSupport::VERSION::MINOR >= 1
+  require 'active_support/deprecation'
+  # ActiveSupport 7.1+ already has a deprecator, no need to set it
+end
+
 require 'active_support/json'
 
 module Adhearsion
