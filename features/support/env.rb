@@ -19,7 +19,7 @@ end
 
 # TODO: check for name space / run issues
 After do
-  terminate_processes!
+  all_commands.each(&:terminate)
 end
 
 # Aruba upstream overwrites these variables so set them here until it is fixed.

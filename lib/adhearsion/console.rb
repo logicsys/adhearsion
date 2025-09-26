@@ -1,7 +1,11 @@
 # encoding: utf-8
 
 require 'pry'
-require 'readline'
+begin
+  require 'readline'
+rescue LoadError
+  require 'reline'
+end
 
 module Adhearsion
   class Console
@@ -108,8 +112,12 @@ module Adhearsion
 
     def cruby_with_readline?
       begin
+        # Check if we have readline module
+        readline_module = defined?(Readline) ? Readline : (defined?(Reline) ? Reline : nil)
+        return false unless readline_module
+
         # If NotImplemented then this might be libedit
-        Readline.emacs_editing_mode
+        readline_module.emacs_editing_mode
         true
       rescue NotImplementedError
         false

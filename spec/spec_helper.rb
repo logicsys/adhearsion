@@ -11,6 +11,8 @@ if ENV.key?("CI")
   SimpleCov.start
 end
 
+require 'logger'  # Required for Ruby 3.3+ compatibility
+
 %w{
   bundler/setup
   active_support

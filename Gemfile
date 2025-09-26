@@ -3,6 +3,7 @@ source 'https://rubygems.org'
 gemspec
 
 gem 'sinatra', require: nil
+gem 'rack', '< 3.0'  # Rack 3.0 incompatible with reel-rack 0.2.3
 
 group :test do
   # TODO: some expectations started failing in 3.8.3
