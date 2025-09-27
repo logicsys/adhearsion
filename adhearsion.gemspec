@@ -37,7 +37,7 @@ Gem::Specification.new do |s|
   s.add_runtime_dependency 'rake', '~> 13.0'
   s.add_runtime_dependency 'reel', ["~> 0.7.0.pre"]
   s.add_runtime_dependency 'http_parser.rb', ["~> 0.6.0"] # Dependency of Reel, verions > 0.6.0 broken under JRuby
-  s.add_runtime_dependency 'reel-rack', ["~> 0.2.0"]
+  s.add_runtime_dependency 'reel-rack', ["~> 0.3.0"]
   s.add_runtime_dependency 'ruby_ami', ["~> 2.2"]
   s.add_runtime_dependency 'ruby_jid', ["~> 1.0"]
   s.add_runtime_dependency 'ruby_speech', ["~> 3.0"]
