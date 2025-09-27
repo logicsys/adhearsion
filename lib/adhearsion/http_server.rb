@@ -21,7 +21,7 @@ module Adhearsion
       options = {
         Host: config.host,
         Port: config.port,
-      }.merge(options)
+      }.merge(options || {})
 
       app = Rack::CommonLogger.new(app, logger)
 
