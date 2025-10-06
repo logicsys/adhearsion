@@ -71,7 +71,7 @@ module Adhearsion
     # @return [Adhearsion::Statistics] a statistics aggregator object capable of producing stats dumps
     def statistics
       unless Celluloid::Actor[:statistics]
-        Statistics.supervise_as :statistics
+        Statistics.supervise as: :statistics
         Statistics.setup_event_handlers
       end
       Celluloid::Actor[:statistics]

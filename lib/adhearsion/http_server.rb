@@ -27,7 +27,7 @@ module Adhearsion
 
       logger.info "Starting HTTP server listening on #{config.host}:#{config.port}"
 
-      supervisor = ::Reel::Rack::Server.supervise_as(:ahn_http_server, app, options)
+      supervisor = ::Reel::Rack::Server.supervise as: :ahn_http_server, args: [app, options]
 
       Adhearsion::Events.register_callback :shutdown do
         supervisor.terminate
