@@ -70,7 +70,7 @@ module Adhearsion
       def init
         size = Adhearsion.config.core.event_threads
         logger.debug "Initializing event worker pool of size #{size}"
-        @queue = Worker.pool(size: size)
+        @queue = Celluloid::Actor.pool(Worker, size: size)
       end
 
       def refresh!
