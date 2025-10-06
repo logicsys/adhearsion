@@ -24,7 +24,7 @@ Gem::Specification.new do |s|
   s.add_runtime_dependency 'activesupport', ["~> 8.0.3"]
   # s.add_runtime_dependency 'activesupport', ["~> 7.1.5.2"]
   s.add_runtime_dependency 'adhearsion-loquacious', ["~> 1.9"]
-  s.add_runtime_dependency 'blather', ["~> 2.0"]
+  s.add_runtime_dependency 'blather', ["~> 2.0.0.rc3"]
   s.add_runtime_dependency 'celluloid', ["~> 0.18.0"]
   s.add_runtime_dependency 'countdownlatch'
   s.add_runtime_dependency 'deep_merge'
@@ -45,7 +45,7 @@ Gem::Specification.new do |s|
   s.add_runtime_dependency 'ruby_speech', ["~> 3.0"]
   s.add_runtime_dependency 'state_machine', ["~> 1.0"]
   s.add_runtime_dependency 'thor', "~> 1.0"
-  s.add_runtime_dependency 'virtus', ["~> 1.0"]
+  s.add_runtime_dependency 'virtus', ["~> 2.0"]
 
   s.add_development_dependency 'aruba', "~> 0.14.0"
   s.add_development_dependency 'cucumber', "~> 8.0"

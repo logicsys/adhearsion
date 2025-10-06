@@ -8,6 +8,7 @@ gem 'reel', github: "logicsys/reel", branch: "develop"
 gem 'reel-rack', github: "logicsys/reel-rack", branch: "develop"
 gem 'ruby_ami', github: "logicsys/ruby_ami", branch: "develop"
 gem 'baby_squeel', github: "logicsys/baby_squeel", branch: "develop"
+gem 'blather', github: "logicsys/blather", branch: "develop"
 
 
 group :test do
