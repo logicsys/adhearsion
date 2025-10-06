@@ -38,6 +38,27 @@ module Adhearsion
       end
     end
 
+    class WorkerPool
+      def initialize(size)
+        @workers = size.times.map { Worker.new }
+        @index = 0
+      end
+
+      def async
+        self
+      end
+
+      def work(type, object)
+        worker = @workers[@index]
+        @index = (@index + 1) % @workers.size
+        worker.async.work(type, object)
+      end
+
+      def alive?
+        @workers.any?(&:alive?)
+      end
+    end
+
     class << self
       def method_missing(method_name, *args, &block)
         Handler.instance.send method_name, *args, &block
@@ -70,7 +91,7 @@ module Adhearsion
       def init
         size = Adhearsion.config.core.event_threads
         logger.debug "Initializing event worker pool of size #{size}"
-        @queue = Celluloid::Actor.pool(Worker, size: size)
+        @queue = WorkerPool.new(size)
       end
 
       def refresh!
