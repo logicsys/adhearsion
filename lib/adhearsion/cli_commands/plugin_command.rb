@@ -64,7 +64,8 @@ module Adhearsion
       def ask_secret(prompt)
         require 'io/console'
         $stdout.print "#{prompt} "
-        $stdin.noecho(&:gets).chomp
+        input = $stdin.tty? ? $stdin.noecho(&:gets) : $stdin.gets
+        input.chomp
       ensure
         $stdout.puts
       end
