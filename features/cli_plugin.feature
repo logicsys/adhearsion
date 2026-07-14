@@ -37,5 +37,5 @@ Feature: Adhearsion Ahn CLI (Plugin)
     And I type "adhearsion/new_plugin"
     Then the output should contain:
     """
-    {"message":
+    "message": "Bad credentials"
     """
