@@ -4,13 +4,14 @@ gemspec
 
 gem 'sinatra', require: nil
 gem 'rack', '~> 3.2.1'
-gem 'reel', github: "logicsys/reel", branch: "develop"
-gem 'reel-rack', github: "logicsys/reel-rack", branch: "develop"
+# Local paths for forks with unpushed commits (revert to github develop pins once pushed)
+gem 'reel', path: '../reel'
+gem 'reel-rack', path: '../reel-rack'
 gem 'ruby_ami', github: "logicsys/ruby_ami", branch: "develop"
 gem 'baby_squeel', github: "logicsys/baby_squeel", branch: "develop"
 gem 'blather', github: "logicsys/blather", branch: "develop"
-gem 'celluloid', github: "logicsys/celluloid", branch: "develop"
-gem 'celluloid-io', github: "logicsys/celluloid-io", branch: "develop"
+gem 'celluloid', path: '../celluloid'
+gem 'celluloid-io', path: '../celluloid-io'
 
 
 group :test do
