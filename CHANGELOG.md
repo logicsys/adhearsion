@@ -1,4 +1,6 @@
-# [develop](https://github.com/adhearsion/adhearsion)
+# [4.1.1](https://github.com/logicsys/adhearsion) - 2026-07-14
+  First stable release of the 4.x line (4.1.0 was never released beyond .rc1). Everything below plus:
+  * Update: Depend on stable sibling releases — reel ~> 0.8 (>= 0.8.1), reel-rack ~> 0.3 (>= 0.3.1), celluloid ~> 0.18 (>= 0.18.1)
   * Update: Ruby 3.3 compatibility — `File.exist?` migrations, explicit `logger` require, reline fallback for the console; `required_ruby_version` is now `>= 3.3`
   * Update: Celluloid 0.18 compatibility — `Celluloid::Proxy::Cell`, `supervise as:`/`args:` supervision API
   * Update: Dependency refresh — ActiveSupport ~> 8.0, thor ~> 1.0, ffi ~> 1.9, nokogiri ~> 1.16, aruba ~> 2.3, cucumber ~> 10.0 (see UPGRADE_SUMMARY.md and CELLULOID_UPGRADE_FIXES.md)

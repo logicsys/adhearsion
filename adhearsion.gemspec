@@ -25,7 +25,7 @@ Gem::Specification.new do |s|
   # s.add_runtime_dependency 'activesupport', ["~> 7.1.5.2"]
   s.add_runtime_dependency 'adhearsion-loquacious', ["~> 1.9"]
   s.add_runtime_dependency 'blather', ["~> 2.1"]
-  s.add_runtime_dependency 'celluloid', ["~> 0.18.0"]
+  s.add_runtime_dependency 'celluloid', ["~> 0.18", ">= 0.18.1"]
   s.add_runtime_dependency 'countdownlatch'
   s.add_runtime_dependency 'deep_merge'
   s.add_runtime_dependency 'ffi', ["~> 1.9"]
@@ -36,9 +36,9 @@ Gem::Specification.new do |s|
   s.add_runtime_dependency 'nokogiri', ["~> 1.16"] # Updated for Ruby 3.3 compatibility
   s.add_runtime_dependency 'pry', '~> 0.14'
   s.add_runtime_dependency 'rake', '~> 13.0'
-  s.add_runtime_dependency 'reel', ["~> 0.8.0.pre"]
+  s.add_runtime_dependency 'reel', ["~> 0.8", ">= 0.8.1"]
   s.add_runtime_dependency 'http_parser.rb', ["~> 0.8.0"] # Dependency of Reel, verions > 0.6.0 broken under JRuby
-  s.add_runtime_dependency 'reel-rack', ["~> 0.3.0"]
+  s.add_runtime_dependency 'reel-rack', ["~> 0.3", ">= 0.3.1"]
   s.add_runtime_dependency 'ruby_ami', ["~> 3.0", ">= 3.0.1"]
   # s.add_runtime_dependency 'ruby_ami', ["~> 2.2"]
   s.add_runtime_dependency 'ruby_jid', ["~> 1.0"]
