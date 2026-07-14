@@ -1,4 +1,10 @@
 # [develop](https://github.com/adhearsion/adhearsion)
+  * Update: Ruby 3.3 compatibility — `File.exist?` migrations, explicit `logger` require, reline fallback for the console; `required_ruby_version` is now `>= 3.3`
+  * Update: Celluloid 0.18 compatibility — `Celluloid::Proxy::Cell`, `supervise as:`/`args:` supervision API
+  * Update: Dependency refresh — ActiveSupport ~> 8.0, thor ~> 1.0, ffi ~> 1.9, nokogiri ~> 1.16, aruba ~> 2.3, cucumber ~> 10.0 (see UPGRADE_SUMMARY.md and CELLULOID_UPGRADE_FIXES.md)
+  * Update: Depend on stable blather (~> 2.1) and ruby_ami (~> 3.0, >= 3.0.1) releases
+  * Security: 26 fixes from the March 2026 security review — shell injection, unsafe YAML load, SSRF, header/parameter injection, path traversal, PII logging and more (see MAINTENANCE_RELEASE_2026_03.md)
+  * Bugfix: `ahn plugin` secret prompts no longer crash with `Errno::ENOTTY` when stdin is not a TTY
   * Bugfix: Return correct recording uri for wav49 format with Asterisk.
   * Bugfix: Handle more AMI error responses which mean the channel is not found
   * Bugfix: Reporting statistics should not deadlock call processing
