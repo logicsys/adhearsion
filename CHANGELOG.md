@@ -1,4 +1,8 @@
-# [4.1.1](https://github.com/logicsys/adhearsion) - 2026-07-14
+# [4.1.2](https://github.com/logicsys/adhearsion/compare/v4.1.1...v4.1.2) - 2026-10-19
+  * Update: Ruby 4.0 support — declare `ostruct` (required undeclared by virtus; a bundled rather than default gem since Ruby 4.0), require `cgi/escape` for `CGI.unescape` (CGI library removed in 4.0)
+  * Update: Development dependencies — aruba ~> 3.0, cucumber ~> 12.0, simplecov 1.x
+
+# [4.1.1](https://github.com/logicsys/adhearsion/compare/v3.0.0.rc1...v4.1.1) - 2026-07-14
   First stable release of the 4.x line (4.1.0 was never released beyond .rc1). Everything below plus:
   * Update: Depend on stable sibling releases — reel ~> 0.8 (>= 0.8.1), reel-rack ~> 0.3 (>= 0.3.1), celluloid ~> 0.18 (>= 0.18.1)
   * Update: Ruby 3.3 compatibility — `File.exist?` migrations, explicit `logger` require, reline fallback for the console; `required_ruby_version` is now `>= 3.3`
