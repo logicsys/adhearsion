@@ -46,6 +46,7 @@ Gem::Specification.new do |s|
   s.add_runtime_dependency 'state_machine', ["~> 1.0"]
   s.add_runtime_dependency 'thor', "~> 1.0"
   s.add_runtime_dependency 'virtus', ["~> 2.0"]
+  s.add_runtime_dependency 'ostruct', ["~> 0.6"] # virtus requires it undeclared; bundled (not default) gem since Ruby 4.0
 
   s.add_development_dependency 'aruba', "~> 3.0"
   s.add_development_dependency 'cucumber', "~> 12.0"

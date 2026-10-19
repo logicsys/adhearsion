@@ -1,6 +1,8 @@
 # encoding: utf-8
 
 require 'ruby_speech'
+require 'cgi/escape'
+require 'cgi/util' if RUBY_VERSION < '4' # pre-4.0 cgi/escape needs CGI::Util for unescape
 require 'adhearsion/translator/asterisk/unimrcp_app'
 
 module Adhearsion

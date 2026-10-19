@@ -17,13 +17,17 @@ module Adhearsion
 
     unless defined? JRUBY_VERSION # These tests are not valid on JRuby
       describe 'testing for readline' do
+        # Ruby 4.0 no longer ships readline as a default gem, so under bundler
+        # console.rb falls back to Reline and Readline is undefined
+        let(:readline_module) { defined?(Readline) ? Readline : Reline }
+
         it 'should return false when detecting readline' do
-          expect(Readline).to receive(:emacs_editing_mode).once.and_return true
+          expect(readline_module).to receive(:emacs_editing_mode).once.and_return true
           expect(Console.cruby_with_readline?).to be true
         end
 
         it 'should return true when detecting libedit' do
-          expect(Readline).to receive(:emacs_editing_mode).once.and_raise NotImplementedError
+          expect(readline_module).to receive(:emacs_editing_mode).once.and_raise NotImplementedError
           expect(Console.cruby_with_readline?).to be false
         end
       end
