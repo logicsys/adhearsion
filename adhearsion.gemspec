@@ -47,12 +47,12 @@ Gem::Specification.new do |s|
   s.add_runtime_dependency 'thor', "~> 1.0"
   s.add_runtime_dependency 'virtus', ["~> 2.0"]
 
-  s.add_development_dependency 'aruba', "~> 2.3"
-  s.add_development_dependency 'cucumber', "~> 10.0"
+  s.add_development_dependency 'aruba', "~> 3.0"
+  s.add_development_dependency 'cucumber', "~> 12.0"
   s.add_development_dependency 'guard-cucumber'
   s.add_development_dependency 'guard-rspec'
   s.add_development_dependency 'rspec', ["~> 3.8"]
-  s.add_development_dependency 'simplecov', '~> 0.22'
+  s.add_development_dependency 'simplecov', '>= 0.22', '< 2'
   s.add_development_dependency 'simplecov-lcov', '~> 0.9'
   s.add_development_dependency 'yard', '~> 0.9.28'
   s.add_development_dependency 'guard-yard'
